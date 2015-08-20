@@ -24,6 +24,7 @@ def create
 end
 
 def edit
+	@workout = Workout.find(params[:id])
 end
  
 
@@ -38,6 +39,8 @@ def update
 end
 
 def destroy
+	@workout.destroy
+	redirect_to root_path
 end
 
 private
